@@ -1,4 +1,4 @@
-﻿const chalk = require('chalk');
+const chalk = require('../utils/chalk');
 const inquirer = require('inquirer');
 const { updateConfig, loadConfig, CONFIG_FILE } = require('../services/config-store');
 
@@ -43,7 +43,7 @@ module.exports = function registerInit(program) {
         model: options.model || answers.model || current.model
       });
 
-      console.log(`${chalk.green('✔')} Configuration saved to ${chalk.cyan(CONFIG_FILE)}`);
+      console.log(`${chalk.green('?')} Configuration saved to ${chalk.cyan(CONFIG_FILE)}`);
       if (!nextConfig.apiKey) {
         console.log(`${chalk.yellow('!')} No API key stored. Use ${chalk.cyan('vibe init --api-key sk-xxx')} once you have one.`);
       }

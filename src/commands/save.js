@@ -1,4 +1,4 @@
-﻿const chalk = require('chalk');
+const chalk = require('../utils/chalk');
 const fs = require('fs');
 const path = require('path');
 const Mustache = require('mustache');
@@ -40,6 +40,6 @@ module.exports = function registerSave(program) {
       fs.mkdirSync(path.dirname(targetPath), { recursive: true });
       fs.writeFileSync(targetPath, content, 'utf8');
 
-      console.log(`${chalk.green('✔')} Saved session to ${chalk.cyan(targetPath)}`);
+      console.log(`${chalk.green('?')} Saved session to ${chalk.cyan(targetPath)}`);
     });
 };

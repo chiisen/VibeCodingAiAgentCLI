@@ -1,4 +1,4 @@
-ï»¿const chalk = require('chalk');
+const chalk = require('../utils/chalk');
 const ora = require('ora');
 const { createAIClient } = require('../services/ai-client');
 
@@ -15,7 +15,7 @@ const PRESETS = {
     messages: [
       'You are in the groove. Keep shipping.',
       'Breathe, refactor, and glide through the sprint.',
-      'Momentum feels goodâ€”capture it in a commit.'
+      'Momentum feels good¡Xcapture it in a commit.'
     ]
   },
   chill: {
@@ -41,7 +41,7 @@ const PRESETS = {
     ],
     messages: [
       'Deploy the feature. Today is the day.',
-      'High-five your future selfâ€”they love this release.',
+      'High-five your future self¡Xthey love this release.',
       'Turn up the playlist and push that pull request.'
     ]
   }

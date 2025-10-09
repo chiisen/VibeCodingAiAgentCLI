@@ -1,4 +1,4 @@
-﻿const chalk = require('chalk');
+const chalk = require('../utils/chalk');
 const inquirer = require('inquirer');
 const ora = require('ora');
 const { createAIClient } = require('../services/ai-client');

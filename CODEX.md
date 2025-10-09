@@ -1,5 +1,7 @@
 # Vibe Coding AI Agent CLI – Codex Notes
 
+![Vibe Coding I Agent CLI](./images/VibeCodingAiAgentCLI.jpg)
+
 ## Purpose
 - Node.js CLI companion that answers coding prompts, generates runnable JavaScript, and保存互動歷程。
 - 主流程從 `src/index.js` 啟動，載入 Commander 指令模組與 dotenv 設定。
@@ -20,7 +22,7 @@
 
 ## Getting Started
 1. `npm install`
-2. `npx . --help` 或 `npm link` 後使用 `vibe --help`
+2. `npx . --help` 或 `npm link` 後使用 `vibe --help` 或是 `node bin/vibe.js --help`
 3. `vibe init` 先填 API Key（可跳過，此時預設 mock）
 4. `vibe ask "prompt"` 或 `vibe run "prompt"` 試用
 

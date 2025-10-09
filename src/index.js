@@ -1,9 +1,10 @@
 require('dotenv').config({ path: process.env.VIBE_DOTENV || '.env' });
 const { Command } = require('commander');
-const chalk = require('chalk');
+const chalk = require('./utils/chalk');
 const pkg = require('../package.json');
 
 require('./services/error-handler');
+const { showBanner } = require('./utils/banner');
 
 const registerInit = require('./commands/init');
 const registerAsk = require('./commands/ask');
@@ -13,6 +14,8 @@ const registerVibe = require('./commands/vibe');
 
 async function main(argv = process.argv) {
   const program = new Command();
+
+  showBanner();
 
   program
     .name('vibe')
