@@ -1,0 +1,33 @@
+﻿{
+  "name": "vibe-coding-ai-agent-cli",
+  "version": "0.1.0",
+  "description": "Vibe Coding AI Agent CLI for asking code questions, generating runnable snippets, and saving sessions.",
+  "bin": {
+    "vibe": "bin/vibe.js"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "ai",
+    "cli",
+    "developer-tools",
+    "openai"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^9.3.6",
+    "mustache": "^4.2.0",
+    "openai": "^4.59.0",
+    "ora": "^8.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.12.0"
+  }
+}
