@@ -83,6 +83,9 @@ vibe vibe
 - 互動歷史：`%USERPROFILE%\.vibe\history.json`
 - CLI 啟動時會自動載入 `.env` 或 `VIBE_DOTENV` 指向的檔案。
 
+## 開發筆記
+- 除了這份 README，還可以參考專案根目錄的 `CODEX.md`。裡面整理了指令架構、模組關係與常用流程，方便日後維護或交接時快速掌握重點。
+
 ## 模擬模式
 - 未提供 API Key、或在指令加上 `--mock` 時會啟用。
 - 回覆會附上建議步驟與範例程式碼，適合 Demo 或教學。
