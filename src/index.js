@@ -1,18 +1,34 @@
+const MIN_NODE_MAJOR = 20;
+
 require('dotenv').config({ path: process.env.VIBE_DOTENV || '.env' });
 const { Command } = require('commander');
-const chalk = require('./utils/chalk');
 const pkg = require('../package.json');
 
 require('./services/error-handler');
-const { showBanner } = require('./utils/banner');
 
-const registerInit = require('./commands/init');
-const registerAsk = require('./commands/ask');
-const registerRun = require('./commands/run');
-const registerSave = require('./commands/save');
-const registerVibe = require('./commands/vibe');
+function assertSupportedNode() {
+  const [majorStr] = process.versions.node.split('.');
+  const major = Number(majorStr);
+
+  if (Number.isNaN(major) || major < MIN_NODE_MAJOR) {
+    console.error(
+      `Vibe Coding requires Node.js ${MIN_NODE_MAJOR}+ for ES module support. Detected ${process.version}. Please upgrade.`
+    );
+    process.exit(1);
+  }
+}
 
 async function main(argv = process.argv) {
+  assertSupportedNode();
+
+  const chalk = require('./utils/chalk');
+  const { showBanner } = require('./utils/banner');
+  const registerInit = require('./commands/init');
+  const registerAsk = require('./commands/ask');
+  const registerRun = require('./commands/run');
+  const registerSave = require('./commands/save');
+  const registerVibe = require('./commands/vibe');
+
   const program = new Command();
 
   showBanner();
