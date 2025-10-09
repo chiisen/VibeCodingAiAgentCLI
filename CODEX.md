@@ -1,7 +1,5 @@
 # Vibe Coding AI Agent CLI – Codex Notes
 
-![Vibe Coding I Agent CLI](./images/VibeCodingAiAgentCLI.jpg)
-
 ## Purpose
 - Node.js CLI companion that answers coding prompts, generates runnable JavaScript, and保存互動歷程。
 - 主流程從 `src/index.js` 啟動，載入 Commander 指令模組與 dotenv 設定。

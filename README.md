@@ -2,6 +2,8 @@
 
 Vibe Coding 是專為習慣命令列流程的 Node.js 開發者打造的 AI 夥伴。透過這個 CLI，你可以向 OpenAI（或內建模擬服務）提問、生成可執行的 JavaScript 程式碼，並保存互動過程，讓日常開發更順手。
 
+![Vibe Coding I Agent CLI](./images/VibeCodingAiAgentCLI.jpg)
+
 ## 系統需求
 - Node.js 20 以上版本
 - 建議（非必須）準備 OpenAI API Key
